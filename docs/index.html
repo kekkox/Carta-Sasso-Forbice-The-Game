@@ -2,38 +2,53 @@
 <html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta Sasso Forbice - The Game</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
   <body>
-    <header>
-        <h1>Carta Sasso Forbice</h1>
-    </header>
+    <div class="page-content">
 
-    <div class="score-board">
-      <div id="user-label" class="player">You</div>
-      <div id="CPU-label"class="player">CPU</div>
-      <span id="user-score">0</span>:<span id="CPU-score">0</span>
-    </div>
+      <header>
+          <h1>Carta Sasso Forbice</h1>
+      </header>
 
-    <div class="result-message">
-      <p>An HTML-CSS-JS game by <a href="https://github.com/kekkox">kekkox</a></p>
-    </div>
-
-    <div class="choises">
-      <div id="p" class="choise">
-        <img src="img/hand-paper.png" alt="paper">
+      <div class="score-board">
+        <div id="user-label" class="player">You</div>
+        <div id="CPU-label"class="player">CPU</div>
+        <span id="user-score">0</span>:<span id="CPU-score">0</span>
       </div>
-      <div id="r" class="choise">
-        <img src="img/hand-rock.png" alt="rock">
-      </div>
-      <div id="s" class="choise">
-        <img src="img/hand-scissors.png" alt="scissors">
-      </div>
-    </div>
 
-    <p id="message">Make your choise!</p>
+      <div class="result-message">
+        <p>An HTML-CSS-JS game by <a href="https://github.com/kekkox">kekkox</a></p>
+      </div>
+
+      <div class="choises">
+        <div id="p" class="choise">
+          <img src="img/hand-paper.png" alt="paper">
+        </div>
+        <div id="r" class="choise">
+          <img src="img/hand-rock.png" alt="rock">
+        </div>
+        <div id="s" class="choise">
+          <img src="img/hand-scissors.png" alt="scissors">
+        </div>
+      </div>
+
+      <p id="message">Make your choise!</p>
+
+  </div>
+    <footer>
+      <p>Created by kekkox. Find me on:</p>
+      <div class="find-me">
+        <a class="fab fa-github" href="https://www.github.com/kekkox"></a>
+        <a class="fab fa-linkedin" href="https://www.linkedin.com/in/francesco-capriglione"></a>
+        <a class="fab fa-facebook" href="https://www.facebook.com/profile.php?id=100000064722370"></a>
+        <a class="fab fa-instagram" href="https://www.instagram.com/kekkox/"></a>
+      </div>
+    </footer>
     <script src="script.js" charset="utf-8"></script>
   </body>
 </html>

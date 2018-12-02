@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +8,23 @@ body {
   background-color: #1a1b24;
   font-family: 'Roboto Slab', serif;
   color: white;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page-content {
+  min-height: 100%;
+  /*negative number is the same of footer height*/
+  margin-bottom: -90px;
+}
+
+.page-content::after {
+  content: "";
+  display: block;
+  /*The same of footer height*/
+  height: 90px;
 }
 
 a, a:visited, a:active {
@@ -64,7 +80,7 @@ header h1 {
 }
 
 .choises {
-  margin: 50px auto;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -91,6 +107,33 @@ header h1 {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
+  margin: 30px;
+}
+
+footer {
+  height: 90px;
+  padding: 15px 0;
+  background-color: white;
+  font-size: 14px;
+  font-style: italic;
+  color: #1a1b24;
+  text-align: center;
+}
+
+.find-me {
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.find-me a, .find-me a:visited {
+  margin: 0 2.5px;
+  border: none;
+  color: #1a1b24;
+  transition: all 0.3s ease;
+}
+
+.find-me a:hover {
+  color: #cc3a39;
 }
 
 .win-glow {
@@ -106,4 +149,23 @@ header h1 {
 .lose-glow {
   border: 4px solid #fc121b;
   box-shadow: 0 0 10px #d01115;
+}
+
+
+/*
+  Responsive
+*/
+@media screen and (min-width: 320px) {
+  .choise { margin: 0 5px;}
+  .choise img {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 410px) {
+  .choise { margin: 0 10px;}
+  .choise img {
+    width: 64px;
+    height: 64px;
+  }
 }
