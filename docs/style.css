@@ -79,12 +79,12 @@ header h1 {
   font-size: 40px;
 }
 
-.choises {
+.choices {
   margin-top: 50px;
   text-align: center;
 }
 
-.choise {
+.choice {
   display: inline-block;
   padding: 15px;
   margin: 0 20px;
@@ -93,12 +93,12 @@ header h1 {
   transition: all 0.3s ease;
 }
 
-.choise:hover {
+.choice:hover {
   cursor: pointer;
   background-color: #16171e;
 }
 
-.choise img {
+.choice img {
   width: 64px;
   height: 64px;
 }
@@ -156,15 +156,15 @@ footer {
   Responsive
 */
 @media screen and (min-width: 320px) {
-  .choise { margin: 0 5px;}
-  .choise img {
+  .choice { margin: 0 5px;}
+  .choice img {
     width: 50px;
     height: 50px;
   }
 }
 @media screen and (min-width: 410px) {
-  .choise { margin: 0 10px;}
-  .choise img {
+  .choice { margin: 0 10px;}
+  .choice img {
     width: 64px;
     height: 64px;
   }

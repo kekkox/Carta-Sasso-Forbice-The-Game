@@ -7,7 +7,7 @@ const paper_div = document.getElementById('p');
 const rock_div = document.getElementById('r');
 const scissors_div = document.getElementById('s');
 
-function convertChoise(letter) {
+function convertChoice(letter) {
   let word = "";
   switch (letter) {
     case "p":
@@ -24,51 +24,51 @@ function convertChoise(letter) {
   return word;
 }
 
-function win(userChoise, cpuChoise) {
+function win(userChoice, cpuChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
-  result_p.innerHTML = convertChoise(userChoise) +" beats " + convertChoise(cpuChoise)+ ". You WIN!";
-  document.getElementById(userChoise).classList.add("win-glow");
-  setTimeout(() => {document.getElementById(userChoise).classList.remove("win-glow")}, 300);
+  result_p.innerHTML = convertChoice(userChoice) +" beats " + convertChoice(cpuChoice)+ ". You WIN!";
+  document.getElementById(userChoice).classList.add("win-glow");
+  setTimeout(() => {document.getElementById(userChoice).classList.remove("win-glow")}, 300);
 }
 
-function draw(userChoise, cpuChoise) {
-  result_p.innerHTML = convertChoise(userChoise) +" equals " + convertChoise(cpuChoise) + ". It's a DRAW!";
-  document.getElementById(userChoise).classList.add("draw-glow");
-  setTimeout(() => {document.getElementById(userChoise).classList.remove("draw-glow")}, 300);
+function draw(userChoice, cpuChoice) {
+  result_p.innerHTML = convertChoice(userChoice) +" equals " + convertChoice(cpuChoice) + ". It's a DRAW!";
+  document.getElementById(userChoice).classList.add("draw-glow");
+  setTimeout(() => {document.getElementById(userChoice).classList.remove("draw-glow")}, 300);
 }
 
-function lose(userChoise, cpuChoise) {
+function lose(userChoice, cpuChoice) {
   cpuScore++;
   cpuScore_span.innerHTML = cpuScore;
-  result_p.innerHTML = convertChoise(userChoise) +" loses to " + convertChoise(cpuChoise) + ". You lost!";
-  document.getElementById(userChoise).classList.add("lose-glow");
-  setTimeout(() => {document.getElementById(userChoise).classList.remove("lose-glow")}, 300);
+  result_p.innerHTML = convertChoice(userChoice) +" loses to " + convertChoice(cpuChoice) + ". You lost!";
+  document.getElementById(userChoice).classList.add("lose-glow");
+  setTimeout(() => {document.getElementById(userChoice).classList.remove("lose-glow")}, 300);
 }
 
-function getCPUChoise() {
-  const choises = ["p","r","s"];
+function getCPUChoice() {
+  const choices = ["p","r","s"];
   const number = Math.floor(Math.random() * 3); //multiplying the generated number by 3, we obtain a number between 0 and 2
-  return choises[number];
+  return choices[number];
 }
 
-function play(userChoise) {
-  const cpuChoise = getCPUChoise();
-  switch (userChoise + cpuChoise) {
+function play(userChoice) {
+  const cpuChoice = getCPUChoice();
+  switch (userChoice + cpuChoice) {
     case "pr":
     case "rs":
     case "sp":
-      win(userChoise, cpuChoise);
+      win(userChoice, cpuChoice);
       break;
     case "pp":
     case "rr":
     case "ss":
-      draw(userChoise, cpuChoise);
+      draw(userChoice, cpuChoice);
       break;
     case "ps":
     case "rp":
     case "sr":
-      lose(userChoise, cpuChoise);
+      lose(userChoice, cpuChoice);
       break;
   }
 
